@@ -18,9 +18,11 @@ namespace Calculator
 				Console.WriteLine("This is a calculator. Type 'list' to see all possible operations.");
 				string choice = Console.ReadLine();
 
-				switch (choice)
+				switch (choice.ToLower())
 				{
 					case "1":
+					case "+":
+					case "addition":
 
 						Console.WriteLine("You have chosen 'Addition'.");
 						/*The user has to enter the numbers first, then the code will take care of the operation.
@@ -46,6 +48,8 @@ namespace Calculator
 						continue;
 
 					case "2":
+					case "-":
+					case "subtraction":
 
 						Console.WriteLine("You have chosen 'Subtraction'.");
 
@@ -69,6 +73,8 @@ namespace Calculator
 						continue;
 
 					case "3":
+					case "*":
+					case "multiplication":
 
 						Console.WriteLine("You have chosen 'Multiplication'.");
 
@@ -92,6 +98,8 @@ namespace Calculator
 						continue;
 
 					case "4":
+					case "/":
+					case "division":
 
 						Console.WriteLine("You have chosen 'Division'.");
 
@@ -115,6 +123,8 @@ namespace Calculator
 						continue;
 
 					case "5":
+					case "%":
+					case "modulus":
 
 						Console.WriteLine("You have chosen 'Modulus'.");
 
@@ -147,6 +157,7 @@ namespace Calculator
 						continue;
 
 					case "exit":
+					case "stop":
 						Console.WriteLine("Please press <Enter> to exit...");
 						Console.ReadKey();
 						break;
